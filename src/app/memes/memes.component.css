@@ -1,10 +1,11 @@
 body{
     height:100%;
     width:100%;
-    background-color: #323642;
-
+    background-color: white;
 }
-
+b{
+    color:#ffbc01;
+}
 #editor{
     height:100%;
 }
@@ -32,7 +33,7 @@ body{
     margin-bottom: 10px;
     padding: 0;
     overflow: hidden;
-    background-color: #2a2c34;
+    background-color: #f8f8f8;
     color:white;
     height: 50px;
 }
@@ -154,7 +155,7 @@ span{
 }
 mesH{
     width: inherit;
-    border-bottom: 1px solid #323642;
+    border-bottom: 1px solid white;
 }
 
 .navitem{
