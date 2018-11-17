@@ -1,17 +1,14 @@
-<div class="modal alerts" [@modal]="modalState">
+<div class="modal" [@modal]="modalState">
 
-  <div class="modal" *ngIf="article.story">
-    <p>{{article.story}}</p>
-  </div>
+    <div class="modal-wrapper">
+      <div class="modal-info">
+        {{ story.story }}
+      </div>
+    </div>
 
   <div class="modalButtons">
-    <a *ngIf="slides[1]" (click)="reverseSlide()"><img src="../assets/icons/arrow-left.svg"></a>
-    <b class="dot"></b>
-    <a (click)="closeModal()"><img src="../assets/icons/close.svg"></a>
-    <b class="dot"></b>
-    <a *ngIf="slides[1]" (click)="forwardSlide()"><img src="../assets/icons/arrow-right.svg"></a>
+    <a class="btn btn-danger" (click)="closeModal()">X</a>
   </div>
-
 </div>
 
 <div class="modalBackdrop" [@modalBackdrop]="modalBackdropState"> </div>

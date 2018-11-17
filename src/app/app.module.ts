@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MemesComponent } from './memes/memes.component';
 import { ModalComponent } from './modal/modal.component';
 import { BroadcasterModalService } from './service/data.service';
+import { MemesService } from './memes/memes.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { BroadcasterModalService } from './service/data.service';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [BroadcasterModalService],
+  providers: [BroadcasterModalService, MemesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -27,15 +27,16 @@ export class ModalComponent implements OnInit {
   @Input() article;
   private show;
   showBack = true;
-  // public index;
+  public index;
   public story;
 
   constructor(private _broadcaster: BroadcasterModalService) { }
 
   ngOnInit() {
     this.delayOpening();
-    this.story = this.article.story;
-    console.log('story: ', this.story);
+    this.index = this.article.index;
+    this.story = this.article.story[this.index];
+    console.log('story: ', this.story, ' index: ', this.index);
   }
 
   get modalState() {
@@ -48,18 +49,14 @@ export class ModalComponent implements OnInit {
   delayOpening() {
     setTimeout(() => {
       this.show = 'show';
-      // if (this.story.length) {
-      //   this.story[this.index].state = 'show';
-      // }
+      this.story.state = 'show';
     }, 100);
   }
 
   closeModal() {
     this.show = !this.show;
     this.showBack = !this.showBack;
-    // for (const slide of this.story) {
-      this.story.state = 'hide';
-    // }
+    this.story.state = 'hide';
     this._broadcaster.sendModalUpdate(false);
   }
 

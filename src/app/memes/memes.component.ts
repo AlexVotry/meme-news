@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MemesService } from './memes.service';
+import { BroadcasterModalService } from '../service/data.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-memes',
@@ -7,20 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _service: MemesService, private _modal: BroadcasterModalService) { }
+
+  public articles = this._service.articles;
+  public showModal = false;
+  public modalData;
+  public subscription: Subscription;
 
   ngOnInit() {
-    this.addlike();
+    this.subscription = this._modal.update$
+    .subscribe(update => this.showModal = update);
+    console.log('articles:', this.articles);
   }
-  addlike() {
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.onreadystatechange = function() {
-    // if (this.readyState == 4 && this.status == 200) {
-    // alert("Thanks");
-    // }
-    // };
-    // xhttp.open("GET", "https://jayswiftdatabase.herokuapp.com/addlike/a", true);
-    // xhttp.send();
+
+  getModal(chosen) {
+    this.showModal = true;
+    this.modalData = {index: chosen, story: this.articles };
   }
 
 }
