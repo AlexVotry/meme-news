@@ -58,7 +58,7 @@ export class ModalComponent implements OnInit {
     this.show = !this.show;
     this.showBack = !this.showBack;
     // for (const slide of this.story) {
-      story.state = 'hide';
+      this.story.state = 'hide';
     // }
     this._broadcaster.sendModalUpdate(false);
   }
