@@ -1,0 +1,290 @@
+body{
+    height:100%;
+    width:100%;
+    background-color: #323642;
+
+}
+
+#editor{
+    height:100%;
+}
+.img{
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 25px;
+    border:solid 2px #474d5d;
+
+
+}
+.rowsides{
+    margin-left:5px;
+    margin-right:5px;
+}
+.logo{
+    float:left;
+    margin-top: 5px;
+    margin-left: 10px;
+    color:white;
+}
+.ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2a2c34;
+    color:white;
+    height: 50px;
+}
+.myname{
+    margin: 0;
+    font-size: 25px;
+    color:#adadad;
+}
+.li {
+    float: right;
+}
+.pf{
+    float: right;
+    margin-top:2px;
+    margin-right:5px;
+
+}
+.username{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+span{
+    margin-right: 5px;
+}
+
+.li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.li a:hover {
+    background-color: #111;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  #myInput {
+    /* background-image: url('./ss.png'); */
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+     border: 1px solid #1e1e1e;
+    margin-bottom: 12px;
+    background-color: #1e1e1e;
+    border-radius: 25px;
+    color:white;
+
+  }
+  #myInput:focus { outline: none; }
+
+  #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:  #252526  ;
+  }
+
+  #myUL li a {
+
+    margin-top: -1px; /* Prevent double borders */
+    background-color:  #1e1e1e;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block
+  }
+
+  #myUL li a:hover:not(.header) {
+    border-left: 1px solid gray;
+  }
+
+.codearea{
+    position: fixed;
+    height: 100%;
+    border-radius: 10px;
+
+}
+.tools{
+    position: absolute;
+    right:50px;
+    top:15px;
+    color:white;
+    z-index: 100;
+    border: 1px solid white;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.tools:hover{
+    border: 1px solid #fd6034;
+}
+
+.comp{
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #1e1e1e;
+    border-radius: 25px;
+    background-color: #1e1e1e;
+    color:white;
+    margin-top:10px;
+}
+.comp:hover{
+    box-shadow: 1px 1px 1px 1px #fd6034;
+    cursor: pointer;
+}
+
+.mesX{
+    width: 25px;
+    float: right;
+}
+mesH{
+    width: inherit;
+    border-bottom: 1px solid #323642;
+}
+
+.navitem{
+    margin:10px;
+    border: 1px solid white;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+
+per{
+    padding: 0;
+    border: none;
+}
+
+i{
+    -webkit-transition: width 2s, height 2s, -webkit-transform 0.5s; /* Safari */
+    transition: width 2s, height 2s, transform 0.5s;
+}
+
+.i:hover{
+    color:white;
+    cursor: pointer;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg) ;
+}
+i:active {
+    color: #32a8e6;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 10;
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+dropdown-content::-webkit-scrollbar {
+    width: 1em;
+}
+
+dropdown-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+dropdown-content::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.Selectedavatar:hover{
+
+    border: 1px solid #fd5f34;
+    border-radius: 15%;
+
+}
+
+.card{
+    color:White;
+    background-color: #22222c45;
+    padding: 15px;
+    cursor: pointer;
+}
+.arrow{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    color:#32a8e6;
+
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 320px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
