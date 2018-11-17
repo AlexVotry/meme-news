@@ -24,19 +24,18 @@ import { BroadcasterModalService } from '../service/data.service';
 
 export class ModalComponent implements OnInit {
 
-  @Input() time;
+  @Input() article;
   private show;
   showBack = true;
-  public index;
-  public slides;
+  // public index;
+  public story;
 
   constructor(private _broadcaster: BroadcasterModalService) { }
 
   ngOnInit() {
     this.delayOpening();
-    this.index = this.time.index;
-    this.slides = this.time.slides;
-    console.log('time: ', this.slides);
+    this.story = this.article.story;
+    console.log('story: ', this.story);
   }
 
   get modalState() {
@@ -49,18 +48,18 @@ export class ModalComponent implements OnInit {
   delayOpening() {
     setTimeout(() => {
       this.show = 'show';
-      if (this.slides.length) {
-        this.slides[this.index].state = 'show';
-      }
+      // if (this.story.length) {
+      //   this.story[this.index].state = 'show';
+      // }
     }, 100);
   }
 
   closeModal() {
     this.show = !this.show;
     this.showBack = !this.showBack;
-    for (const slide of this.slides) {
-      slide.state = 'hide';
-    }
+    // for (const slide of this.story) {
+      story.state = 'hide';
+    // }
     this._broadcaster.sendModalUpdate(false);
   }
 

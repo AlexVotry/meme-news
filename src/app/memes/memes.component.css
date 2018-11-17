@@ -1,13 +1,19 @@
 body{
     height:100%;
     width:100%;
+    padding: 0;
     background-color: white;
 }
 b{
-    color:#ffbc01;
+    color: white;
 }
 #editor{
     height:100%;
+}
+.sideBar {
+  height: 200vh;
+  background-color: #ffbc01;
+
 }
 .img{
     height: 200px;
@@ -15,25 +21,23 @@ b{
     cursor: pointer;
     border-radius: 25px;
     border:solid 2px #474d5d;
-
-
 }
 .rowsides{
     margin-left:5px;
     margin-right:5px;
 }
 .logo{
-    float:left;
-    margin-top: 5px;
-    margin-left: 10px;
-    color:white;
+  height: 150px;
+  float:left;
+  margin-top: -40px;
+  margin-left: 10px;
 }
-.ul {
+.banner {
     list-style-type: none;
     margin-bottom: 10px;
     padding: 0;
     overflow: hidden;
-    background-color: #f8f8f8;
+    background-color: #ffbc01;
     color:white;
     height: 50px;
 }

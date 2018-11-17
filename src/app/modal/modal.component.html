@@ -1,70 +1,8 @@
-<div class="modal {{slides[index].icon }} alerts" [@modal]="modalState">
+<div class="modal alerts" [@modal]="modalState">
 
-<div class="modal-hourly" *ngIf="time.hourly">
-  <h1>{{ slides[index].formattedTime }}</h1>
-  <h3>{{ slides[index].summary }}</h3>
-  <div class="modal-wrapper">
-    <div class="modal-info">
-      <p>temp:</p> {{ slides[index].temp }}&#176;
-    </div>
-    <div class="modal-info">
-      <p>cloud cover:</p> {{ slides[index].cloudCover }}
-    </div>
-    <div class="modal-info">
-      <p>dewPoint:</p> {{ slides[index].dewPoint }}&#176;
-    </div>
-    <div class="modal-info">
-      <p>humidity:</p> {{ slides[index].humidity * 100 }}%
-    </div>
-    <div class="modal-info">
-      <p>chance of rain:</p> {{ slides[index].precipProbability * 100 }}%
-    </div>
-    <div class="modal-info">
-      <p>amount of rain:</p> {{ slides[index].precipIntensity }}  in
-    </div>
-    <div class="modal-info">
-      <p>wind speed:</p> {{ slides[index].windSpeed }} mph
-    </div>
+  <div class="modal" *ngIf="article.story">
+    <p>{{article.story}}</p>
   </div>
-</div>
-
-<div class="modal-daily" *ngIf="time.daily">
-  <h1>{{ slides[index].time * 1000 | date : "EEEE" }}</h1>
-  <div class="modal-wrapper">
-    <div class="modal-info">
-      <p>Low: {{ slides[index].lowTemp}}&#176;</p>
-      at {{ slides[index].lowTime }}
-    </div>
-    <div class="modal-info">
-      <p>High: {{ slides[index].highTemp }}&#176;</p>
-      at {{ slides[index].highTime }}
-    </div>
-    <div class="modal-info">
-      <p>rain fall:</p> {{ slides[index].precipIntensity }} in
-    </div>
-    <div class="modal-info">
-      <p>humidity:</p> {{ slides[index].humidity * 100 }}%
-    </div>
-    <div class="modal-info">
-      <p>sunrise:</p> {{ slides[index].sunrise }}
-    </div>
-    <div class="modal-info">
-      <p>sunset:</p> {{ slides[index].sunset }}
-    </div>
-    <div class="modal-info">
-      <p>chance of rain:</p> {{ slides[index].precipProbability * 100 }}%
-    </div>
-    <div class="modal-info">
-      <p>wind speed:</p> {{ slides[index].windSpeed }} mph
-    </div>
-  </div>
-</div>
-
-<div class="modal-alerts" *ngIf="time.alerts">
-  <h1>{{ slides[index].title }}</h1>
-  <p>{{ slides[index].description }}</p>
-</div>
-
 
   <div class="modalButtons">
     <a *ngIf="slides[1]" (click)="reverseSlide()"><img src="../assets/icons/arrow-left.svg"></a>
@@ -75,4 +13,5 @@
   </div>
 
 </div>
+
 <div class="modalBackdrop" [@modalBackdrop]="modalBackdropState"> </div>
