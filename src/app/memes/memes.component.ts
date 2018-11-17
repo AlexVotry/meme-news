@@ -28,4 +28,13 @@ export class MemesComponent implements OnInit {
     this.modalData = {index: chosen, story: this.articles };
   }
 
+  addLikes(chosen) {
+    this.articles[chosen].likes++;
+    console.log(this.articles[chosen].count);
+  }
+
+  addHates(chosen) {
+    this.articles[chosen].hates++;
+  }
+
 }
