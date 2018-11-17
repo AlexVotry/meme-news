@@ -1,14 +1,16 @@
 .meme{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 33.3%;
+    width:300px;
     padding:2px; 
-    float: left;
     margin: 10px;
-    
 }
 .main{
     margin-left: 20%;
+}
+.memes{
+   display: flex;
+flex-wrap: wrap;
 }
 .meme:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
@@ -38,11 +40,10 @@ b{
     color:black;
 }
 .img{
-    height: 200px;
-    width: 200px;
+    
+    width: 100%;
     cursor: pointer;
-    border-radius: 25px;
-    border:solid 2px #474d5d;
+ 
 }
 .rowsides{
     margin-left:5px;

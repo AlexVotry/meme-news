@@ -23,11 +23,11 @@
         </div>
         <div class="main col-md-10">
           <div class="row">
-            <div class="col-md-4 col-sm-3">
+             <div class="memes">
               <div *ngFor="let article of articles let i = index">
-                <a class="meme" (click)="getModal(i)">
+                <div class="meme" (click)="getModal(i)">
                   <img class="img"src="{{article.meme}}" >
-                </a>
+                </div>
               </div>
             </div>
         </div>
