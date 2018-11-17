@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MemesService } from './memes.service';
+import { BroadcasterModalService } from '../service/data.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-memes',
@@ -8,28 +10,22 @@ import { MemesService } from './memes.service';
 })
 export class MemesComponent implements OnInit {
 
-  constructor(private _service: MemesService) { }
+  constructor(private _service: MemesService, private _modal: BroadcasterModalService) { }
 
-  public articles = [
-    { story: "first story",
-      meme: "../../assets/logo.png"
-    },
-    { story: "second story",
-      meme: "../../assets/logo.png"
-    },
-    { story: "third story",
-      meme: "../../assets/logo.png"
-    },
-    { story: "fourth story",
-      meme: "../../assets/logo.png"
-    },
-    { story: "fifth story",
-      meme: "../../assets/logo.png"
-    }
-  ];
+  public articles = this._service.articles;
+  public showModal = false;
+  public modalData;
+  public subscription: Subscription;
 
   ngOnInit() {
+    this.subscription = this._modal.update$
+    .subscribe(update => this.showModal = update);
     console.log('articles:', this.articles);
+  }
+
+  getModal(chosen) {
+    this.showModal = true;
+    this.modalData = {index: chosen, story: this.articles };
   }
 
 }

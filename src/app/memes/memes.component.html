@@ -24,12 +24,15 @@
         <div class="main col-md-10">
           <div class="row">
             <div class="col-md-4 col-sm-3">
-                <div class="meme" *ngFor="let article of articles">
-                  <div>
-                    <img class="img"src="{{article.meme}}" >
-                  </div>
-                </div>
+              <div *ngFor="let article of articles let i = index">
+                <a class="meme" (click)="getModal(i)">
+                  <img class="img"src="{{article.meme}}" >
+                </a>
+              </div>
             </div>
         </div>
+      </div>
+      <div *ngIf="showModal">
+        <app-modal [article]='modalData'></app-modal>
       </div>
     </div>
