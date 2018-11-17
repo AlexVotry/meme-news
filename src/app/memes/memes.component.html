@@ -28,6 +28,8 @@
                 <div class="meme" (click)="getModal(i)">
                   <img class="img"src="{{article.meme}}" >
                 </div>
+                <button type="button" class="btn btn-success fa fa-thumbs-o-up" (click)="addLikes(i)">  {{article.likes}}</button>
+                <button type="button" class="btn btn-danger fa fa-thumbs-down" (click)="addHates(i)">  {{article.hates}}</button>
               </div>
             </div>
         </div>
