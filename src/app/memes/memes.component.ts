@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MemesService } from './memes.service';
 
 @Component({
   selector: 'app-memes',
@@ -7,20 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _service: MemesService) { }
+
+  public articles = [
+    { story: "first story",
+      meme: "../../assets/logo.png"
+    },
+    { story: "second story",
+      meme: "../../assets/logo.png"
+    },
+    { story: "third story",
+      meme: "../../assets/logo.png"
+    },
+    { story: "fourth story",
+      meme: "../../assets/logo.png"
+    },
+    { story: "fifth story",
+      meme: "../../assets/logo.png"
+    }
+  ];
 
   ngOnInit() {
-    this.addlike();
-  }
-  addlike() {
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.onreadystatechange = function() {
-    // if (this.readyState == 4 && this.status == 200) {
-    // alert("Thanks");
-    // }
-    // };
-    // xhttp.open("GET", "https://jayswiftdatabase.herokuapp.com/addlike/a", true);
-    // xhttp.send();
+    console.log('articles:', this.articles);
   }
 
 }
