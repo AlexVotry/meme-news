@@ -33,12 +33,15 @@ b{
 .sideBar {
   height: 200vh;
   background-color: #f8f8f8;
-  color:#fd7f49;
+   
   position: fixed;
 
 }
 .sideBar h4{
     color:black;
+}
+.sideBar a{
+    color: #fd7f49;
 }
 .img{
 
