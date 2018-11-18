@@ -30,7 +30,7 @@ export class MemesComponent implements OnInit {
 
   addLikes(chosen) {
     this.articles[chosen].likes++;
-    console.log(this.articles[chosen].count);
+     
   }
 
   addHates(chosen) {
