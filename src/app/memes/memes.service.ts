@@ -9,9 +9,9 @@ export class MemesService {
       hates: 0,
       likes: 0
     },
-    { headline: "second story",
-      story: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      meme: "../../assets/s1.jpg",
+    { headline: "Turkey says lira will strengthen, dollar has 'lost credibility'",
+      story: "ANKARA (Reuters) - Turkey’s finance minister promised to protect the lira on Tuesday, after it fell to a record low against the dollar this week, and said the U.S. currency had “lost credibility” because it had been exploited as a political tool.",
+      meme: "../../assets/stroy4.png",
       hates: 0,
       likes: 0
     },
@@ -68,9 +68,9 @@ export class MemesService {
       meme: "../../assets/stroy2.png",
       hates: 0,
       likes: 0
-
     }
   ]
+  public categories = ["Sports", "Politics", "Current Affairs", "Entertainment", "Funny", "News", "Opinion", "Culture", "lifestyle", "World News", "Environment", "Soccer", "Business", "Tech", "Science", "Film", "Music", "Games"]
 
   constructor() { }
 

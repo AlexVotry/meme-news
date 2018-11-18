@@ -14,29 +14,9 @@
       <div class="row">
         <div class="sideBar col-md-2">
           <h4>Categories</h4>
-          <ul>
-              <li><a> <span class="glyphicon glyphicon-asterisk"></span> Business </a></li>
-             <li> <a><span class="glyphicon glyphicon-asterisk"></span> Weather </a></li>
-             <li> <a><span class="glyphicon glyphicon-asterisk"></span> Sports </a></li>
-             <li> <a><span class="glyphicon glyphicon-flag"></span> Local </a></li>
-             <li> <a><span class="glyphicon glyphicon-flag"></span> Startup </a></li>
-             <li> <a><span class="glyphicon glyphicon-asterisk"></span> Fitness </a></li>
-             <li> <a><span class="glyphicon glyphicon-film"></span> Product </a></li>
-             <li><a> <span class="glyphicon glyphicon-flag"></span> Womens Right</a>
-             
-             <li><a> <span class="glyphicon glyphicon-asterisk"></span> International </a></li>
-             <li> <a><span class="glyphicon glyphicon-film"></span> Technology </a></li>
-             <li><a> <span class="glyphicon glyphicon-flag"></span> Current Affairs</a></li>
-             <li><a> <span class="glyphicon glyphicon-asterisk"></span> Entertainment</a></li>
-             <li><a> <span class="glyphicon glyphicon-music"></span> Music</a></li>
-             <li><a> <span class="glyphicon glyphicon-glass"></span> Drinks</a></li>
-             <li><a> <span class="glyphicon glyphicon-star"></span> Work</a></li>
-             <li><a> <span class="glyphicon glyphicon-heart"></span> Love</a></li>
-             <li><a> <span class="glyphicon glyphicon-facetime-video"></span> Apple</a></li>
-             <li><a> <span class="glyphicon glyphicon-cloud"></span> Compnies</a></li>
-             <li> <a><span class="glyphicon glyphicon-facetime-video"></span> Food</a></li>
-             
-           </ul>
+          <ul *ngFor="let category of categories">
+            <li><a>{{ category }}</a></li>
+          </ul>
         </div>
         <div class="main col-md-10">
           <div class="row">
