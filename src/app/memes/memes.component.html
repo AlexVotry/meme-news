@@ -14,11 +14,8 @@
       <div class="row">
         <div class="sideBar col-md-2">
           <h4>Categories</h4>
-          <ul>
-            <li>Sports</li>
-            <li>Politics</li>
-            <li>Current Affairs</li>
-            <li>Entertainment</li>
+          <ul *ngFor="let category of categories">
+            <li><a>{{ category }}</a></li>
           </ul>
         </div>
         <div class="main col-md-10">

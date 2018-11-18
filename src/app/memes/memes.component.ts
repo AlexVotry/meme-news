@@ -13,6 +13,7 @@ export class MemesComponent implements OnInit {
   constructor(private _service: MemesService, private _modal: BroadcasterModalService) { }
 
   public articles = this._service.articles;
+  public categories = this._service.categories;
   public showModal = false;
   public modalData;
   public subscription: Subscription;
@@ -30,7 +31,6 @@ export class MemesComponent implements OnInit {
 
   addLikes(chosen) {
     this.articles[chosen].likes++;
-    console.log(this.articles[chosen].count);
   }
 
   addHates(chosen) {

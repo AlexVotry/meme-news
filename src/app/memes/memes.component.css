@@ -321,3 +321,6 @@ dropdown-content::-webkit-scrollbar-thumb {
 button {
   background-color: #a5a5a5;
 }
+li a {
+  color: #fd6034;
+}
