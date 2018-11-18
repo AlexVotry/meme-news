@@ -1,9 +1,12 @@
 <div class="modal" [@modal]="modalState">
 
     <div class="modal-wrapper">
-      <div class="modal-info">
+      <div class="modal-info" *ngIf="story.story">
         <h2>{{ story.headline }}</h2>
           <p>{{ story.story }}</p>
+      </div>
+      <div class="modal-info" *ngIf="story.image">
+        <img class="story-image" src="{{story.image}}" alt="story">
       </div>
     </div>
 
