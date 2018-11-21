@@ -37,4 +37,8 @@ export class MemesComponent implements OnInit {
     this.articles[chosen].hates++;
   }
 
+  addComments(chosen) {
+    this.articles[chosen].comments++;
+  }
+
 }

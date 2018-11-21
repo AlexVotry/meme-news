@@ -33,7 +33,7 @@ b{
 .sideBar {
   height: 200vh;
   background-color: #f8f8f8;
-   
+
   position: fixed;
 
 }
@@ -323,6 +323,7 @@ dropdown-content::-webkit-scrollbar-thumb {
 }
 button {
   background-color: #a5a5a5;
+  margin-left: 20px;
 }
 li a {
   color: #fd6034;
